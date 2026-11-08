@@ -143,6 +143,7 @@ h1, h2, p { margin-top: 0; }
 .people-heading h2 { margin: 0; color: var(--olive-deep); font-family: var(--serif); font-size: clamp(48px, 5.6vw, 66px); font-weight: 500; letter-spacing: -.035em; line-height: .98; }
 .people-heading h2 em { color: var(--olive-mid); font-weight: 400; }
 .people-heading > p:last-child { margin: 13px auto 0; color: var(--muted); font-size: 12px; }
+.guest-note { max-width: 650px; margin: 0 auto 30px; padding: 14px 20px; border-block: 1px solid #d5d9c8; color: #68695e; font-family: var(--serif); font-size: 17px; font-style: italic; line-height: 1.45; text-align: center; }
 .people-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
 .people-card { position: relative; padding: 18px 22px 20px; border: 0; border-top: 1px solid #d5d9c8; background: transparent; text-align: center; }
 .people-card::before { position: absolute; top: -1px; left: 50%; width: 34px; height: 2px; background: var(--gold); content: ''; transform: translateX(-50%); }
