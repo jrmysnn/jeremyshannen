@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title description">
+  <title id="title">Sample GCash QR placeholder</title>
+  <desc id="description">Decorative, non-scannable placeholder. Replace with your GCash QR code.</desc>
+  <rect width="240" height="240" fill="#f8f6ef"/>
+  <path fill="#4b5320" d="M20 20h70v70H20zm10 10v50h50V30zm10 10h30v30H40zM150 20h70v70h-70zm10 10v50h50V30zm10 10h30v30h-30zM20 150h70v70H20zm10 10v50h50v-50zm10 10h30v30H40zM105 20h10v10h-10zm20 0h10v20h-10zm-20 20h20v10h-20zm20 20h10v20h-10zm-20 10h10v20h-10zm20 20h20v10h-20zm30 10h10v20h-10zm20 0h10v10h-10zm20 0h15v10h-15zm-100 10h10v20h-10zm20 0h20v10h-20zm30 10h20v10h-20zm30 10h10v20h-10zm20-10h20v10h-20zm-110 20h10v10h-10zm20 0h20v20h-20zm30 0h10v10h-10zm20 0h20v10h-20zm40 10h10v20h-10zm20 0h15v10h-15zm-80 20h20v10h-20zm30 0h10v20h-10zm20 10h20v10h-20zm30 0h10v20h-10zm20 0h15v10h-15zm-100 20h10v10h-10zm20 0h20v10h-20zm30 0h10v20h-10zm20 10h20v10h-20z"/>
+  <rect x="87" y="97" width="66" height="46" rx="3" fill="#f8f6ef" stroke="#b89e68" stroke-width="2"/>
+  <text x="120" y="117" fill="#4b5320" font-family="Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle">SAMPLE</text>
+  <text x="120" y="132" fill="#77786d" font-family="Arial,sans-serif" font-size="8" text-anchor="middle">NOT SCANNABLE</text>
+</svg>

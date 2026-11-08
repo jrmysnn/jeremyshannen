@@ -6,6 +6,29 @@
   const meetingScene = document.querySelector('#meeting-scene');
   const sceneMessage = document.querySelector('[data-scene-message]');
 
+  const invitationCover = document.querySelector('#invitation-cover');
+  const invitationContent = document.querySelector('#invitation-content');
+  const openInvitationButton = document.querySelector('#open-invitation');
+  openInvitationButton?.addEventListener('click', () => {
+    if (!invitationCover || !invitationContent) return;
+    openInvitationButton.disabled = true;
+    invitationCover.classList.add('is-opening');
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const openingDuration = reducedMotion ? 0 : 1600;
+    const revealDuration = reducedMotion ? 0 : 700;
+    window.setTimeout(() => {
+      invitationCover.classList.add('is-revealing');
+      window.setTimeout(() => {
+        invitationCover.hidden = true;
+        invitationContent.removeAttribute('inert');
+        invitationContent.removeAttribute('aria-hidden');
+        document.body.classList.remove('invitation-locked');
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+        document.querySelector('#main')?.focus({ preventScroll: true });
+      }, revealDuration);
+    }, openingDuration);
+  });
+
   function updateCountdown() {
     const remainingMs = Math.max(0, ceremony.getTime() - Date.now());
     const totalSeconds = Math.floor(remainingMs / 1000);

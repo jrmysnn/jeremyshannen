@@ -11,9 +11,15 @@ A responsive, static wedding invitation website made for GitHub Pages. The logo,
 
 No build step is required. The countdown is set to December 20, 2026 at 2:30 PM Philippines Time. The walkers approach across the final 120 days. The downloadable calendar invite is `calendar.ics`.
 
+The invitation opens with an animated envelope. The venue schedule, wedding party, color palette, and `#ForeverJereMyShannen` branding are included on the page.
+
 ## RSVP
 
 No RSVP contact or response service was provided, so the site does not pretend to submit guest responses. Add an RSVP email address or form service before sharing the invitation if you want guests to reply through the site.
+
+## Monetary gifts
+
+The GCash and InstaPay cards use decorative, non-scannable placeholders in `assets/gcash-qr-placeholder.svg` and `assets/instapay-qr-placeholder.svg`. Replace each placeholder with the couple’s real QR image before sharing the site; the current samples cannot receive payments.
 
 ## Photos
 

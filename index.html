@@ -17,27 +17,48 @@
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
   </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
+  <body class="invitation-locked">
+    <section class="invitation-cover" id="invitation-cover" aria-labelledby="cover-title">
+      <div class="cover-content">
+        <p class="eyebrow"><span class="eyebrow-rule"></span> A little something for you <span class="eyebrow-rule"></span></p>
+        <h1 id="cover-title">You’re <em>invited.</em></h1>
+        <button class="envelope-button" id="open-invitation" type="button" aria-label="Open Jeremy and Shannen’s wedding invitation">
+          <span class="envelope">
+            <span class="envelope-back" aria-hidden="true"></span>
+            <span class="envelope-letter" aria-hidden="true"><img src="assets/brand-monogram.png" alt="" /></span>
+            <span class="envelope-flap" aria-hidden="true"></span>
+            <span class="envelope-front" aria-hidden="true"></span>
+            <span class="envelope-seal" aria-hidden="true"><img src="assets/brand-monogram.png" alt="" /></span>
+          </span>
+          <span class="cover-prompt">Click to open your invitation <span aria-hidden="true">↓</span></span>
+        </button>
+        <p class="cover-names">Jeremy <span>&amp;</span> Shannen · 20 December 2026</p>
+      </div>
+    </section>
 
-    <header class="site-header">
-      <a class="wordmark" href="#top" aria-label="Jeremy and Shannen, home">
-        <img class="brand-logo" src="assets/brand-monogram.png" alt="Jeremy and Shannen monogram" />
-        <span class="wordmark-caption">THE WEDDING OF</span>
-      </a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
-        <span></span><span></span>
-      </button>
-      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
-        <a href="#our-day">Our day</a>
-        <a href="#our-people">Our people</a>
-        <a href="#countdown">Countdown</a>
-        <a href="#gallery">Photos</a>
-        <a class="nav-calendar" href="calendar.ics" download>Save the date <span aria-hidden="true">↗</span></a>
-      </nav>
-    </header>
+    <div class="invitation-content" id="invitation-content" inert aria-hidden="true">
+      <a class="skip-link" href="#main">Skip to content</a>
+      <header class="site-header">
+        <a class="wordmark" href="#top" aria-label="Jeremy and Shannen, home">
+          <img class="brand-logo" src="assets/brand-monogram.png" alt="Jeremy and Shannen monogram" />
+          <span class="wordmark-caption">THE WEDDING OF <strong>#ForeverJereMyShannen</strong></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
+          <span></span><span></span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+          <a href="#our-day">Our day</a>
+          <a href="#venue">Venue</a>
+          <a href="#faith">Our faith</a>
+          <a href="#our-people">Our people</a>
+          <a href="#countdown">Countdown</a>
+          <a href="#gifts">Gifts</a>
+          <a href="#gallery">Photos</a>
+          <a class="nav-calendar" href="calendar.ics" download>Save the date <span aria-hidden="true">↗</span></a>
+        </nav>
+      </header>
 
-    <main id="main">
+      <main id="main" tabindex="-1">
       <section class="hero section-shell" id="top" aria-labelledby="hero-title">
         <div class="hero-copy">
           <p class="eyebrow"><span class="eyebrow-rule"></span> With joy in our hearts <span class="eyebrow-rule"></span></p>
@@ -131,15 +152,46 @@
             <span class="detail-icon" aria-hidden="true">✳</span>
             <div><span class="detail-label">WHEN</span><p>Sunday, December 20, 2026<br /><strong>2:30 in the afternoon</strong></p></div>
           </div>
-          <div class="event-detail">
-            <span class="detail-icon detail-icon-pin" aria-hidden="true">⌖</span>
-            <div><span class="detail-label">WHERE</span><p><strong>Angel Gabriel’s Garden</strong><br />Sta. Maria, Bulacan</p></div>
-          </div>
-          <a class="text-link" href="https://maps.google.com/?q=Angel+Gabriel%27s+Garden+Sta+Maria+Bulacan" target="_blank" rel="noreferrer">Find the venue <span aria-hidden="true">↗</span></a>
           <aside class="gift-note" aria-label="A note about gifts">
             <h3>A note about gifts</h3>
             <p>We’re grateful for thoughtful gifts of all kinds. A monetary gift would be especially appreciated as we begin our life together.</p>
           </aside>
+        </div>
+      </section>
+
+      <section class="venue-section section-shell" id="venue" aria-labelledby="venue-title">
+        <div class="venue-photo" data-reveal>
+          <img src="assets/venue-angel-gabriel.jpg" alt="Angel Gabriel’s Garden, the setting for Jeremy and Shannen’s wedding" loading="lazy" />
+        </div>
+        <div class="venue-copy" data-reveal>
+          <p class="eyebrow"><span class="eyebrow-rule"></span> Where we’ll celebrate <span class="eyebrow-rule"></span></p>
+          <h2 id="venue-title">Meet us<br />in the <em>garden.</em></h2>
+          <p class="venue-name">Angel Gabriel’s Garden</p>
+          <p class="venue-address">Sta. Maria, Bulacan</p>
+          <div class="venue-schedule">
+            <div><time datetime="14:30">2:30 PM</time><span>Garden Ceremony</span></div>
+            <div><time datetime="18:00">6:00 PM</time><span>Reception</span></div>
+          </div>
+          <a class="text-link venue-map-link" href="https://maps.google.com/?q=Angel+Gabriel%27s+Garden+Sta+Maria+Bulacan" target="_blank" rel="noreferrer">Find the venue <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+
+      <section class="faith-section section-shell" id="faith" aria-labelledby="faith-title">
+        <div class="faith-card" data-reveal>
+          <svg class="faith-strands" viewBox="0 0 90 140" fill="none" aria-hidden="true">
+            <path class="strand-god" d="M20 2C78 18 78 34 20 50s58 32 0 48 58 32 0 40" />
+            <path class="strand-wife" d="M45 2C-13 18-13 34 45 50S-13 82 45 98s-58 32 0 40" />
+            <path class="strand-husband" d="M70 2c58 16 58 32 0 48s58 32 0 48 58 32 0 40" />
+          </svg>
+          <div class="faith-copy">
+            <p class="eyebrow"><span class="eyebrow-rule"></span> Our foundation <span class="eyebrow-rule"></span></p>
+            <h2 id="faith-title">A love grounded<br />in <em>faith.</em></h2>
+            <blockquote>
+              <p>“A cord of three strands is not quickly broken.”</p>
+              <cite>Ecclesiastes 4:12</cite>
+            </blockquote>
+            <p class="faith-note">With God at the heart of their marriage, wife and husband are woven together in love.</p>
+          </div>
         </div>
       </section>
 
@@ -152,11 +204,11 @@
         <div class="people-grid">
           <article class="people-card" data-reveal>
             <h3>Wedding Officiant</h3>
-            <ul class="people-list"><li>Pastor Jeff Nacua</li></ul>
+            <ul class="people-list"><li>Pastor Jeff Austria Nacua</li></ul>
           </article>
           <article class="people-card" data-reveal>
             <h3>Host</h3>
-            <ul class="people-list"><li>Pam</li></ul>
+            <ul class="people-list"><li>Pam Javier</li></ul>
           </article>
           <article class="people-card" data-reveal>
             <h3>Parents of the Groom</h3>
@@ -166,25 +218,30 @@
             <h3>Parents of the Bride</h3>
             <ul class="people-list"><li>Rolando Reyes</li><li>Marcelina Reyes</li></ul>
           </article>
-          <article class="people-card" data-reveal>
+          <article class="people-card people-card-wide principal-sponsors" data-reveal>
+            <h3>Principal Sponsors</h3>
+            <div class="sponsor-columns">
+              <section class="sponsor-group" aria-labelledby="ninong-title">
+                <h4 id="ninong-title">Ninongs</h4>
+                <ul class="people-list"><li>Nandy Sison</li><li>Polly Blanco</li><li>Emmanuel Habil Sr.</li><li>Glenbert Cristobal</li></ul>
+              </section>
+              <section class="sponsor-group" aria-labelledby="ninang-title">
+                <h4 id="ninang-title">Ninangs</h4>
+                <ul class="people-list"><li>Rucel De Lemos</li><li>Flor Aristotole</li><li>Rizza Bernardino</li><li>Rosario Valino</li></ul>
+              </section>
+            </div>
+          </article>
+          <article class="people-card people-card-wide wedding-party-card" data-reveal>
             <h3>Wedding Party</h3>
-            <ul class="people-list people-list-roles">
-              <li><span>Best Man</span>Ivan Spenzer Sison</li>
-              <li><span>Groomsman</span>Sirc Pagaran</li>
-              <li><span>Maid of Honor</span>Kimberley Ann Reyes</li>
-              <li><span>Bridesmaid</span>Princess Catherine Sison</li>
-              <li><span>Bridesmaid</span>Rica Alcantara</li>
-              <li><span>Bridesmaid</span>Jennyrose Dela Cruz</li>
-              <li><span>Bridesmaid</span>Layssa Labramonte</li>
-            </ul>
-          </article>
-          <article class="people-card" data-reveal>
-            <h3>Ninangs</h3>
-            <ul class="people-list"><li>Rucel De Lemos</li><li>Flor Aristotole</li><li>Rizza Bernardino</li><li>Rosario Valino</li></ul>
-          </article>
-          <article class="people-card" data-reveal>
-            <h3>Ninong</h3>
-            <ul class="people-list"><li>Nandy Sison</li><li>Polly Blanco</li><li>Emmanuel Habil Sr.</li><li>Glenbert Cristobal</li></ul>
+            <div class="party-grid">
+              <div class="party-member"><span class="party-role">Best Man</span><span class="party-name">Ivan Spenzer Sison</span></div>
+              <div class="party-member"><span class="party-role">Groomsman</span><span class="party-name">Sirc Pagaran</span></div>
+              <div class="party-member"><span class="party-role">Maid of Honor</span><span class="party-name">Kimberley Ann Reyes</span></div>
+              <div class="party-member"><span class="party-role">Bridesmaid</span><span class="party-name">Princess Catherine Sison</span></div>
+              <div class="party-member"><span class="party-role">Bridesmaid</span><span class="party-name">Rica Alcantara</span></div>
+              <div class="party-member"><span class="party-role">Bridesmaid</span><span class="party-name">Jennyrose Dela Cruz</span></div>
+              <div class="party-member"><span class="party-role">Bridesmaid</span><span class="party-name">Layssa Labramonte</span></div>
+            </div>
           </article>
           <article class="people-card people-card-wide" data-reveal>
             <h3>Family &amp; Friends</h3>
@@ -215,8 +272,27 @@
           <div class="palette-swatch"><span class="swatch-color swatch-army"></span><span>Army green</span><small>#4B5320</small></div>
           <div class="palette-swatch"><span class="swatch-color swatch-olive"></span><span>Deep olive</span><small>#2D3518</small></div>
           <div class="palette-swatch"><span class="swatch-color swatch-sage"></span><span>Sage</span><small>#77804A</small></div>
-          <div class="palette-swatch"><span class="swatch-color swatch-ivory"></span><span>Warm ivory</span><small>#F8F6EF</small></div>
           <div class="palette-swatch"><span class="swatch-color swatch-champagne"></span><span>Champagne</span><small>#B89E68</small></div>
+        </div>
+      </section>
+
+      <section class="gifts-section section-shell" id="gifts" aria-labelledby="gifts-title">
+        <div class="gifts-heading" data-reveal>
+          <p class="eyebrow"><span class="eyebrow-rule"></span> A little note of thanks <span class="eyebrow-rule"></span></p>
+          <h2 id="gifts-title">Your presence is our <em>present.</em></h2>
+          <p>If you would like to give a monetary gift, you may use either QR code below. Thank you for being part of our beginning.</p>
+        </div>
+        <div class="gift-options">
+          <article class="gift-option" data-reveal>
+            <h3>GCash</h3>
+            <img src="assets/gcash-qr-placeholder.svg" alt="Sample GCash QR placeholder. Replace with your own GCash QR code before sharing." loading="lazy" />
+            <p>Replace with your GCash QR code</p>
+          </article>
+          <article class="gift-option" data-reveal>
+            <h3>InstaPay</h3>
+            <img src="assets/instapay-qr-placeholder.svg" alt="Sample InstaPay QR placeholder. Replace with your own InstaPay QR code before sharing." loading="lazy" />
+            <p>Replace with your InstaPay QR code</p>
+          </article>
         </div>
       </section>
 
@@ -246,19 +322,21 @@
         <a class="button button-light" href="calendar.ics" download>Save our date <span aria-hidden="true">↓</span></a>
         <div class="final-names">Jeremy <span>&amp;</span> Shannen</div>
       </section>
-    </main>
+      </main>
 
-    <footer class="site-footer">
-      <span>MADE WITH LOVE</span>
-      <span>J <i>&amp;</i> S · 2026</span>
-      <a href="#top">Back to the top ↑</a>
-    </footer>
+      <footer class="site-footer">
+        <span>MADE WITH LOVE</span>
+        <span>J <i>&amp;</i> S · 2026</span>
+        <span class="footer-hashtag">#ForeverJereMyShannen</span>
+        <a href="#top">Back to the top ↑</a>
+      </footer>
 
-    <dialog class="lightbox" id="photo-dialog" aria-label="Wedding photo viewer">
-      <button class="lightbox-close" type="button" aria-label="Close photo">×</button>
-      <button class="lightbox-arrow lightbox-prev" type="button" aria-label="Previous photo">‹</button>
-      <figure><img src="" alt="" /><figcaption></figcaption></figure>
-      <button class="lightbox-arrow lightbox-next" type="button" aria-label="Next photo">›</button>
-    </dialog>
+      <dialog class="lightbox" id="photo-dialog" aria-label="Wedding photo viewer">
+        <button class="lightbox-close" type="button" aria-label="Close photo">×</button>
+        <button class="lightbox-arrow lightbox-prev" type="button" aria-label="Previous photo">‹</button>
+        <figure><img src="" alt="" /><figcaption></figcaption></figure>
+        <button class="lightbox-arrow lightbox-next" type="button" aria-label="Next photo">›</button>
+      </dialog>
+    </div>
   </body>
 </html>
